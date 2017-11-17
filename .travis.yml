@@ -10,3 +10,5 @@ before_script:
   - sleep 15
 script:
   - ./node_modules/.bin/grunt eslint-test-coverage
+after_script: "npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls"
+
