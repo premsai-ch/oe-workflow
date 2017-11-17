@@ -42,6 +42,25 @@ module.exports = function GruntConfig(grunt) {
           reportFormats: ['lcov']
         }
       }
+    },
+    
+    mocha_no_activiti_istanbul: {
+      coverage: {
+        src: [
+          'test/*.js'
+        ],
+        options: {
+          excludes: [],
+          timeout: 60000,
+          check: {
+            lines: 75,
+            statements: 75,
+            branches: 65,
+            functions: 75
+          },
+          reportFormats: ['lcov']
+        }
+      }
     }
   });
 
@@ -56,5 +75,6 @@ module.exports = function GruntConfig(grunt) {
   grunt.registerTask('just-mocha-istanbul', ['mocha_istanbul']);
   grunt.registerTask('test-with-coverage', ['clean:coverage', 'mocha_istanbul']);
   grunt.registerTask('eslint-test-coverage', [ 'eslint', 'clean:coverage', 'mocha_istanbul']);
+  grunt.registerTask('eslint-test-no-activiti-coverage', [ 'eslint', 'clean:coverage', 'mocha_no_activiti_istanbul']);
   grunt.registerTask('all', ['eslint', 'clean:coverage', 'mocha_istanbul']);
 };
