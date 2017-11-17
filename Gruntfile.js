@@ -27,30 +27,11 @@ module.exports = function GruntConfig(grunt) {
     mocha_istanbul: {
       coverage: {
         src: [
-          'test/*.js',
-          'test/activiti-integeration/*.js'
-        ],
-        options: {
-          excludes: [],
-          timeout: 60000,
-          check: {
-            lines: 75,
-            statements: 75,
-            branches: 65,
-            functions: 75
-          },
-          reportFormats: ['lcov']
-        }
-      }
-    },
-    
-    mocha_no_activiti_istanbul: {
-      coverage: {
-        src: [
           'test/*.js'
+//           'test/activiti-integeration/*.js'
         ],
         options: {
-          excludes: [],
+          excludes: ['test/implicit-related-model-attachement.js'],
           timeout: 60000,
           check: {
             lines: 75,
@@ -62,6 +43,7 @@ module.exports = function GruntConfig(grunt) {
         }
       }
     }
+    
   });
 
   // Add the grunt-mocha-test tasks.
@@ -75,6 +57,5 @@ module.exports = function GruntConfig(grunt) {
   grunt.registerTask('just-mocha-istanbul', ['mocha_istanbul']);
   grunt.registerTask('test-with-coverage', ['clean:coverage', 'mocha_istanbul']);
   grunt.registerTask('eslint-test-coverage', [ 'eslint', 'clean:coverage', 'mocha_istanbul']);
-  grunt.registerTask('eslint-test-no-activiti-coverage', [ 'eslint', 'clean:coverage', 'mocha_no_activiti_istanbul']);
   grunt.registerTask('all', ['eslint', 'clean:coverage', 'mocha_istanbul']);
 };
