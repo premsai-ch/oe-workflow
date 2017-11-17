@@ -50,7 +50,7 @@ describe('User Creation', function callback() {
   });
 });
 
-describe('Test case for Implicitly attaching workflow to related models - ImplicitPost and sameworkflow attachment', function callback() {
+describe.skip('Test case for Implicitly attaching workflow to related models - ImplicitPost and sameworkflow attachment', function callback() {
   this.timeout(35000);
   var BaseModel = 'PersonModel01';
   var RelatedModel = 'EmailModel01';
@@ -297,7 +297,7 @@ describe('Test case for Implicitly attaching workflow to related models - Implic
   });
 });
 
-describe('Test case for Implicitly attaching workflow to related models - Not an Implicit Post but attach same workflow', function callback() {
+describe.skip('Test case for Implicitly attaching workflow to related models - Not an Implicit Post but attach same workflow', function callback() {
   this.timeout(35000);
   var BaseModel = 'PersonModel02';
   var RelatedModel = 'EmailModel02';
@@ -525,7 +525,7 @@ describe('Test case for Implicitly attaching workflow to related models - Not an
   });
 });
 
-describe('Test case for Implicitly attaching workflow to related models - Implicit Post but not same workflow attachment', function callback() {
+describe.skip('Test case for Implicitly attaching workflow to related models - Implicit Post but not same workflow attachment', function callback() {
   this.timeout(15000);
   var BaseModel = 'PersonModel03';
   var RelatedModel = 'EmailModel03';
@@ -764,7 +764,7 @@ describe('Test case for Implicitly attaching workflow to related models - Implic
   });
 });
 
-describe('Test case for Implicitly attaching workflow to related models - Neither an Implicit post nor sameworkflow attachment', function callback() {
+describe.skip('Test case for Implicitly attaching workflow to related models - Neither an Implicit post nor sameworkflow attachment', function callback() {
   this.timeout(15000);
   var BaseModel = 'PersonModel04';
   var RelatedModel = 'EmailModel04';
@@ -1003,7 +1003,7 @@ describe('Test case for Implicitly attaching workflow to related models - Neithe
   });
 });
 
-describe('Test case for Implicitly attaching workflow to related models - Related Model already attached[Error scenario]', function callback() {
+describe.skip('Test case for Implicitly attaching workflow to related models - Related Model already attached[Error scenario]', function callback() {
   this.timeout(35000);
   var BaseModel = 'PersonModel05';
   var RelatedModel = 'EmailModel05';
