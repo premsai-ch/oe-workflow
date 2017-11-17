@@ -28,10 +28,10 @@ module.exports = function GruntConfig(grunt) {
       coverage: {
         src: [
           'test/*.js'
-//           'test/activiti-integeration/*.js'
+//        'test/activiti-integeration/*.js'
         ],
         options: {
-          excludes: ['test/implicit-related-model-attachement.js'],
+          excludes: [],
           timeout: 60000,
           check: {
             lines: 75,
