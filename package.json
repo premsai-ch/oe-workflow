@@ -6,13 +6,16 @@
     "lint": "./node_modules/.bin/eslint .",
     "fix-lint": "./node_modules/.bin/eslint --fix .",
     "precoverage": "npm install --no-optional",
-    "test": "./node_modules/.bin/mocha"          
+    "test": "./node_modules/.bin/mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "app-root-path": "^1.3.0",
     "async": "2.4.1",
     "uuid": "^3.1.0",
-    "xml2js": "0.4.17"
+    "xml2js": "0.4.17",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -36,5 +39,6 @@
     "oe-cloud": "git+https://github.com/EdgeVerve/oe-cloud.git#master",
     "oe-logger": "git+https://github.com/EdgeVerve/oe-logger.git#master"
   },
-  "description": "oe-workflow engine written using oecloud.io framework"
+  "description": "oe-workflow engine written using oecloud.io framework",
+  "snyk": true
 }
